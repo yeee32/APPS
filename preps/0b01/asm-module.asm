@@ -21,6 +21,7 @@
 
     section .text
 
+    ; Ukol 1
     global asm_even_nums
 asm_even_nums:
     mov ecx, 0 ; suma = 0 (suma je ecx)
@@ -44,7 +45,7 @@ asm_even_nums:
     mov [g_int_evens], edx ; g_odd_numbers = edx
     ret
 
-
+    ; Ukol 2
     global asm_select_neg_vals
 asm_select_neg_vals:
     mov ecx, 0 ; set counter to 0
@@ -69,6 +70,7 @@ asm_select_neg_vals:
 .end_loop:
     ret ; exits
 
+    ; Ukol 3
     global asm_count_vowels
 asm_count_vowels:
     mov ecx, 0 ; counter
@@ -99,6 +101,7 @@ asm_count_vowels:
     mov [g_vowelCount], edi
     ret ; exit
 
+    ; Ukol 4
     global asm_replace_third
 asm_replace_third:
     mov ecx, 0 ; counter = 0
