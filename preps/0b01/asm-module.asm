@@ -109,9 +109,9 @@ asm_replace_third:
     mov dil, 0 ; will store values of g_char_array
     mov bl, 3 ; bl = 3
 .again:
-    cmp ecx, 32 ; ecx - 32
-    jge .end_loop ; pokud je counter >= 32, tak skoc do end_loop (ecx >= 0)
     mov dil, [g_char_array + ecx] ; dil = g_char_arr[ecx]
+    cmp dil, 0 ; check if it's not the end of string '\0'
+    jz .end_loop    ; if is 0, jump to end loop
     inc ecx ; counter++ (ecx++)
     cmp dil, 'a' ; compares al to ascii value of letter 'a' (97)
     je .isVowel ; if is equal to the value of letter a, jumps to isVowel
