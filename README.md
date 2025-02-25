@@ -1,2 +1,2 @@
 # APPS
-repozitář na připravu do APPS
+repository for preparation and school work in APPS
